@@ -27,11 +27,15 @@ El objetivo del proyecto es diseñar y analizar una base de datos bancaria que p
 
 ## 🛠️ Tecnologías utilizadas
 
-- 🐘 **PostgreSQL**
-- ⚡ **Supabase**
-- 🔎 **SQL**
-- 🐙 **GitHub**
-- 🔄 **GitHub Actions**
+## 📂 Organización del repositorio
+
+El repositorio se organiza en diferentes carpetas para facilitar la revisión y mantenimiento del proyecto:
+
+- 🗃️ database/ — contiene el esquema principal de la base de datos.
+- 🔎 queries/ — contiene las consultas SQL utilizadas para los análisis.
+- ⚡ supabase/ — contiene las migraciones utilizadas para la implementación en Supabase.
+- 🛠️ create_database/ — contiene scripts complementarios para la creación y documentación de la base de datos.
+- 🔄 .github/workflows/ — contiene la configuración del proceso de integración y despliegue mediante GitHub Actions.
 
 ---
 
