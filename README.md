@@ -1,56 +1,80 @@
-# KRAF — Sistema Bancario y Analítica Financiera
+# 🏦 KRAF — Sistema Bancario y Analítica Financiera
 
-Proyecto de Arquitectura de Datos en Entornos Digitales para el diseño y análisis de una base de datos bancaria para KRAF.
+Proyecto de **Arquitectura de Datos en Entornos Digitales** para el diseño, implementación y análisis de una base de datos bancaria para KRAF.
 
-## Estudiantes
+## 👥 Estudiantes
 
 - Fernando Boveda Pleitez — 202401115
 - Karen María Mina Martínez — 202400945
 - Rodrigo Javier Villalobos Hernández — 202400878
 - Alejandro Raphael Mejía Guerrero — 202401441
 
-## Descripción
+---
 
-KRAF es un modelo de datos orientado a la gestión de clientes, cuentas, entidades financieras y transferencias. El proyecto incluye el diseño de una estructura relacional, poblado con datos sintéticos y consultas SQL para análisis operativo.
+## 📖 Descripción
 
-## Tecnologías
+KRAF es un modelo de datos orientado a la gestión de **clientes, cuentas, entidades financieras y transferencias**.
 
-- PostgreSQL
-- Supabase
-- SQL
-- GitHub
+El proyecto comprende el diseño de una estructura relacional, su implementación en PostgreSQL mediante Supabase, el poblamiento con datos sintéticos y la elaboración de consultas SQL para realizar análisis operativos y financieros.
 
-## Estructura de la base de datos
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- 🐘 **PostgreSQL**
+- ⚡ **Supabase**
+- 🔎 **SQL**
+- 🐙 **GitHub**
+- 🔄 **GitHub Actions**
+
+---
+
+## 🗃️ Estructura de la base de datos
 
 El modelo está compuesto por las siguientes tablas principales:
 
-- `cliente`
-- `cuenta`
-- `tipo_cuenta`
-- `entidad_financiera`
-- `tipo_transferencia`
-- `transferencia`
-- `saldo_historico`
+| Tabla | Descripción |
+|---|---|
+| 👤 `cliente` | Información de los clientes |
+| 💳 `tipo_cuenta` | Catálogo de tipos de cuenta |
+| 🏦 `entidad_financiera` | Entidades financieras disponibles |
+| 🔄 `tipo_transferencia` | Catálogo de tipos de transferencia |
+| 💰 `cuenta` | Cuentas asociadas a los clientes |
+| 💸 `transferencia` | Registro de transferencias realizadas |
+| 📈 `saldo_historico` | Historial de saldos de las cuentas |
 
-## Contenido del proyecto
+La estructura implementa relaciones mediante **claves primarias y foráneas**, manteniendo la integridad de los datos.
 
-- Diseño de la estructura relacional.
-- Poblado con datos sintéticos.
-- Verificación de registros.
-- Consultas SQL de analítica operativa.
-- Implementación y despliegue mediante Supabase.
+---
 
-## Analítica
+## 📊 Datos sintéticos
 
-Las consultas desarrolladas permiten analizar aspectos como:
+La base de datos fue poblada con información sintética para permitir la ejecución y validación de las consultas analíticas.
 
-- Concentración de transferencias por cliente.
-- Evolución de saldos por tipo de cuenta.
-- Transferencias por entidad financiera y canal.
-- Perfil transaccional de los clientes.
-- Transferencias con montos inusuales.
+Se cuenta con:
 
-## Herramientas utilizadas
+- 👤 **40 clientes**
+- 💳 **10 tipos de cuenta**
+- 🏦 **10 entidades financieras**
+- 🔄 **10 tipos de transferencia**
+- 💰 **40 cuentas**
+- 💸 **400 transferencias**
+- 📈 **480 registros de saldo histórico**
 
-**Base de datos:** PostgreSQL / Supabase  
-**Control de versiones:** GitHub
+Los datos son sintéticos y se utilizan únicamente con fines académicos.
+
+> Los datos no forman parte del versionamiento del repositorio. El repositorio contiene principalmente la estructura y los scripts necesarios para la implementación de la base de datos.
+
+---
+
+## 🔎 Consultas analíticas
+
+El proyecto incluye consultas SQL orientadas al análisis de diferentes aspectos del sistema bancario:
+
+1. 💸 **Concentración de transferencias por cliente**
+2. 📈 **Evolución de saldos promedio por tipo de cuenta**
+3. 🏦 **Transferencias por canal y entidad financiera**
+4. 👤 **Perfil de clientes**
+5. ⚠️ **Identificación de transferencias con montos inusuales**
+
+Estas consultas permiten obtener información útil para el análisis operativo y financiero del modelo.
