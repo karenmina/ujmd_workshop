@@ -19,6 +19,11 @@ El proyecto comprende el diseño de una estructura relacional, su implementació
 
 ---
 
+## 🎯 Objetivo
+
+El objetivo del proyecto es diseñar y analizar una base de datos bancaria que permita organizar información de clientes, cuentas, entidades financieras y transferencias. A partir de los datos sintéticos se desarrollan consultas SQL que facilitan la identificación de patrones y la generación de información útil para el análisis financiero.
+---
+
 ## 🛠️ Tecnologías utilizadas
 
 - 🐘 **PostgreSQL**
