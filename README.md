@@ -1,89 +1,56 @@
-# Sivar Express — Database (UJMD Workshop)
+# KRAF — Sistema Bancario y Analítica Financiera
 
-**Asignatura:** Arquitectura de Datos en Entornos Digitales  
-**Universidad:** Dr. José Matías Delgado (UJMD)
+Proyecto de Arquitectura de Datos en Entornos Digitales para el diseño y análisis de una base de datos bancaria para KRAF.
 
----
+## Estudiantes
 
-## 📐 Schema Overview
+- Fernando Boveda Pleitez — 202401115
+- Karen María Mina Martínez — 202400945
+- Rodrigo Javier Villalobos Hernández — 202400878
+- Alejandro Raphael Mejía Guerrero — 202401441
 
-Modelo relacional en **3FN** para el sistema de delivery "Sivar Express".
+## Descripción
 
-| Tabla | Descripción |
-|---|---|
-| `departamento` | Catálogo de departamentos de El Salvador |
-| `municipio` | Municipios vinculados a cada departamento |
-| `cliente` | Clientes con dirección normalizada |
-| `repartidor` | Personal de entrega y vehículos asignados |
-| `producto` | Catálogo de productos y precio vigente |
-| `pedido` | Cabecera de pedidos |
-| `detalle_pedido` | Desglose de productos por pedido (tabla asociativa N:M) |
+KRAF es un modelo de datos orientado a la gestión de clientes, cuentas, entidades financieras y transferencias. El proyecto incluye el diseño de una estructura relacional, poblado con datos sintéticos y consultas SQL para análisis operativo.
 
----
+## Tecnologías
 
-## 🚀 CI/CD Pipeline
+- PostgreSQL
+- Supabase
+- SQL
+- GitHub
 
-This repository is connected to **Supabase** via **GitHub Actions**.
+## Estructura de la base de datos
 
-### How it works
+El modelo está compuesto por las siguientes tablas principales:
 
-1. Add a new `.sql` file inside `supabase/migrations/` following the naming convention:
-   ```
-   YYYYMMDDHHmmss_description.sql
-   ```
-2. Commit and push to `main`:
-   ```bash
-   git add supabase/migrations/
-   git commit -m "feat: add new migration"
-   git push origin main
-   ```
-3. GitHub Actions automatically runs `supabase db push` to apply the migration to your Supabase project.
+- `cliente`
+- `cuenta`
+- `tipo_cuenta`
+- `entidad_financiera`
+- `tipo_transferencia`
+- `transferencia`
+- `saldo_historico`
 
-### Pipeline triggers
+## Contenido del proyecto
 
-The workflow runs **only when** files inside `supabase/migrations/` change on a push to `main`.
+- Diseño de la estructura relacional.
+- Poblado con datos sintéticos.
+- Verificación de registros.
+- Consultas SQL de analítica operativa.
+- Implementación y despliegue mediante Supabase.
 
----
+## Analítica
 
-## 🔑 Required GitHub Secrets
+Las consultas desarrolladas permiten analizar aspectos como:
 
-Go to your GitHub repo → **Settings → Secrets and variables → Actions** and add:
+- Concentración de transferencias por cliente.
+- Evolución de saldos por tipo de cuenta.
+- Transferencias por entidad financiera y canal.
+- Perfil transaccional de los clientes.
+- Transferencias con montos inusuales.
 
-| Secret | Where to find it |
-|---|---|
-| `SUPABASE_ACCESS_TOKEN` | [supabase.com/dashboard/account/tokens](https://supabase.com/dashboard/account/tokens) |
-| `SUPABASE_PROJECT_REF` | Your project URL: `https://supabase.com/dashboard/project/<ref>` |
-| `SUPABASE_DB_PASSWORD` | Project Settings → Database → Database password |
+## Herramientas utilizadas
 
----
-
-## 📁 Project Structure
-
-```
-ujmd_workshop/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Actions CI/CD pipeline
-├── supabase/
-│   └── migrations/
-│       └── 20260810000000_initial_schema.sql
-├── create_database/
-│   ├── create_database.sql     # Original DDL (reference)
-│   └── reporte.sql             # Query examples
-└── .gitignore
-```
-
----
-
-## 🛠️ Adding Future Migrations
-
-Never edit existing migration files. Instead, create a **new** file:
-
-```bash
-# Example: adding a new column
-# File: supabase/migrations/20260815120000_add_email_to_cliente.sql
-
-ALTER TABLE cliente ADD COLUMN IF NOT EXISTS email VARCHAR(255);
-```
-
-Then commit and push — the pipeline will deploy it automatically.
+**Base de datos:** PostgreSQL / Supabase  
+**Control de versiones:** GitHub
