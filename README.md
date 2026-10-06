@@ -87,24 +87,6 @@ El proyecto incluye consultas SQL orientadas al análisis de diferentes aspectos
 4. 👤 **Perfil de clientes**
 5. ⚠️ **Identificación de transferencias con montos inusuales**
 
-Estas consultas permiten obtener información útil para el análisis operativo y financiero del modelo.
-
-
-
-Raphael — Análisis realizado
-
-Este complementa perfectamente tus 5 consultas.
-
-Dónde
-
-En README.md, después de la lista de las 5 consultas analíticas.
-
-Actualmente tienes:
-
-5. ⚠️ *Identificación de transferencias con montos inusuales*
-
-Debajo de eso, que agregue:
-
 ---
 
 ## 💡 Enfoque de análisis
